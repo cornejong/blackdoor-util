@@ -7,6 +7,7 @@
       "Tests\\": "tests/"
     }
   },
+  "license": "MIT",
   "authors": [
     {
       "name": "Corné de Jong",
@@ -14,7 +15,6 @@
     }
   ],
   "require": {
-    "erusev/parsedown": "^1.7",
-    "blackdoor/testing": "dev-main"
+    "erusev/parsedown": "^1.7"
   }
 }
