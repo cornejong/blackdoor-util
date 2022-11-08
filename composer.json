@@ -16,5 +16,8 @@
   ],
   "require": {
     "erusev/parsedown": "^1.7"
+  },
+  "require-dev": {
+    "blackdoor/testing": "dev-main"
   }
 }
