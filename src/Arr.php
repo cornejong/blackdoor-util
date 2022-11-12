@@ -30,21 +30,21 @@ class Arr
 
     public const FLAT_QUERY_EXPRESSION_SEPARATOR = '\.';
 
-    public function issetAnyOf(array $haystack, array $needles) : bool
+    public static function issetAnyOf(array $haystack, array $needles): bool
     {
-        foreach($needles as $needle) {
-            if(isset($haystack[$needle])) {
+        foreach ($needles as $needle) {
+            if (isset($haystack[$needle])) {
                 return true;
             }
         }
 
         return false;
     }
-    
-    public function issetAllOf(array $haystack, array $needles) : bool
+
+    public static function issetAllOf(array $haystack, array $needles): bool
     {
         $results = [];
-        foreach($needles as $needle) {
+        foreach ($needles as $needle) {
             $results = isset($haystack[$needle]);
         }
 

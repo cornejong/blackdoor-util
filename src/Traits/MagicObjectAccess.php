@@ -30,7 +30,7 @@ trait MagicObjectAccess
     public function __get($offset)
     {
         if (empty($this->containerPointer ?? null)) {
-            throw new Exception('No container pointer provided!', 1);
+            throw new \Exception('No container pointer provided!', 1);
         }
 
         return $this->{$this->containerPointer}[$offset] ?? null;
@@ -46,7 +46,7 @@ trait MagicObjectAccess
     public function __set($offset, $value)
     {
         if (empty($this->containerPointer ?? null)) {
-            throw new Exception('No container pointer provided!', 1);
+            throw new \Exception('No container pointer provided!', 1);
         }
 
         return $this->{$this->containerPointer}[$offset] = $value;
@@ -62,7 +62,7 @@ trait MagicObjectAccess
     public function __isset($offset)
     {
         if (empty($this->containerPointer ?? null)) {
-            throw new Exception('No container pointer provided!', 1);
+            throw new \Exception('No container pointer provided!', 1);
         }
 
         return isset($this->{$this->containerPointer}[$offset]);
@@ -77,7 +77,7 @@ trait MagicObjectAccess
     public function __unset($offset)
     {
         if (empty($this->containerPointer ?? null)) {
-            throw new Exception('No container pointer provided!', 1);
+            throw new \Exception('No container pointer provided!', 1);
         }
 
         unset($this->{$this->containerPointer}[$offset]);
