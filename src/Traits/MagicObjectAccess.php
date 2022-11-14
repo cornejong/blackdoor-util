@@ -33,6 +33,10 @@ trait MagicObjectAccess
             throw new \Exception('No container pointer provided!', 1);
         }
 
+        if (!isset($this->{$this->containerPointer}[$offset])) {
+            trigger_error("Undefined property: " . static::class . "::$offset", E_USER_WARNING);
+        }
+
         return $this->{$this->containerPointer}[$offset] ?? null;
     }
 
